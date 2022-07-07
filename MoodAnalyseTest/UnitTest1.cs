@@ -21,10 +21,10 @@ namespace MoodAnalyseTest
         public void CheckMoodAny()
         {
             var m1 = new MoodAnalyser("msg");
-            m1.AnalyseAnyMood("I am in  happy mood");
+            var res1= m1.AnalyseAnyMood("I am in any mood");
 
 
-            Assert.AreEqual("happy","happy");
+            Assert.AreEqual("happy",res1);
         }
     }
 }

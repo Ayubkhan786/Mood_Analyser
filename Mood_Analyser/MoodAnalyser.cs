@@ -17,40 +17,41 @@ namespace Mood_Analyser
         }
         public string AnalyseMood(string msg)
         {
-            //message = Console.ReadLine();
+           
             if (msg.Length > 0)
             {
                 message = msg;
             }
-            if (message.Contains("happy", StringComparison.OrdinalIgnoreCase))
+            if (msg.Contains("happy", StringComparison.OrdinalIgnoreCase))
             {
                 return "happy";
             }
-            if (message.Contains("sad", StringComparison.OrdinalIgnoreCase))
+            if (msg.Contains("sad", StringComparison.OrdinalIgnoreCase))
             {
                 return "sad";
             }
 
             return null;
         }
-        public void  AnalyseAnyMood(string msg)
+        public string AnalyseAnyMood(string msg)
         {
-            //message = Console.ReadLine();
+
             if (msg.Length > 0)
             {
                 message = msg;
             }
-                       
-            if (message.Contains("sad", StringComparison.OrdinalIgnoreCase))
+
+            if (msg.Contains("sad", StringComparison.OrdinalIgnoreCase))
             {
-                Console.WriteLine("sad");
+                return "sad";
             }
             else
             {
-                Console.WriteLine("happy");
+                return "happy";
             }
+            return null;
         }
 
-   }
+    }
 }
 
