@@ -1,0 +1,15 @@
+C:\Users\Ayub\source\repos\Mood_Analyser\Mood_Analyser\obj\Debug\net6.0\Mood_Analyser.csproj.AssemblyReference.cache
+C:\Users\Ayub\source\repos\Mood_Analyser\Mood_Analyser\obj\Debug\net6.0\Mood_Analyser.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ayub\source\repos\Mood_Analyser\Mood_Analyser\obj\Debug\net6.0\Mood_Analyser.AssemblyInfoInputs.cache
+C:\Users\Ayub\source\repos\Mood_Analyser\Mood_Analyser\obj\Debug\net6.0\Mood_Analyser.AssemblyInfo.cs
+C:\Users\Ayub\source\repos\Mood_Analyser\Mood_Analyser\obj\Debug\net6.0\Mood_Analyser.csproj.CoreCompileInputs.cache
+C:\Users\Ayub\source\repos\Mood_Analyser\Mood_Analyser\bin\Debug\net6.0\Mood_Analyser.exe
+C:\Users\Ayub\source\repos\Mood_Analyser\Mood_Analyser\bin\Debug\net6.0\Mood_Analyser.deps.json
+C:\Users\Ayub\source\repos\Mood_Analyser\Mood_Analyser\bin\Debug\net6.0\Mood_Analyser.runtimeconfig.json
+C:\Users\Ayub\source\repos\Mood_Analyser\Mood_Analyser\bin\Debug\net6.0\Mood_Analyser.dll
+C:\Users\Ayub\source\repos\Mood_Analyser\Mood_Analyser\bin\Debug\net6.0\Mood_Analyser.pdb
+C:\Users\Ayub\source\repos\Mood_Analyser\Mood_Analyser\obj\Debug\net6.0\Mood_Analyser.dll
+C:\Users\Ayub\source\repos\Mood_Analyser\Mood_Analyser\obj\Debug\net6.0\refint\Mood_Analyser.dll
+C:\Users\Ayub\source\repos\Mood_Analyser\Mood_Analyser\obj\Debug\net6.0\Mood_Analyser.pdb
+C:\Users\Ayub\source\repos\Mood_Analyser\Mood_Analyser\obj\Debug\net6.0\Mood_Analyser.genruntimeconfig.cache
+C:\Users\Ayub\source\repos\Mood_Analyser\Mood_Analyser\obj\Debug\net6.0\ref\Mood_Analyser.dll

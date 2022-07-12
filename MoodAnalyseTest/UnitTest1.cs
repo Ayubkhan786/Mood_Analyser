@@ -7,6 +7,36 @@ namespace MoodAnalyseTest
     [TestClass]
     public class UnitTest1
     {
+        string Null = "Its Null";
+        string Empty = "Its Empty";
+
+
+
+        [TestMethod]
+        public void checkEmptyMood()
+        {
+            //To check the test case 
+            //If Empty it return Empty message
+            MoodAnalyse test1 = new MoodAnalyse("");
+            var res1 = test1.AnalyseEmptyMood();
+            string Exp1 = Empty;
+            Assert.AreEqual(Exp1, res1);
+        }
+        [TestMethod]
+        public void checkNullMood()
+        {
+            //To check the test case 
+            //If Null it return Null message
+            MoodAnalyse test2 = new MoodAnalyse(null);
+            var res2 = test2.AnalyseNullMood();
+            string Exp2 = Null;
+            Assert.AreEqual(Exp2, res2);
+
+
+        }
+
+
+
         [TestMethod]
 
         //The data in the row is null
