@@ -29,7 +29,7 @@ namespace Mood_Analyser
         ExceptionType type;
         public enum ExceptionType
         {
-            NULL, EMPTY, NO_SUCH_CLASS, NO_SUCH_CONSTRUCTOR
+            NULL, EMPTY, NO_SUCH_CLASS, NO_SUCH_CONSTRUCTOR , NO_SUCH_METHOD
         }
         public Custom_Exception(ExceptionType type, string message) : base(message)
         {

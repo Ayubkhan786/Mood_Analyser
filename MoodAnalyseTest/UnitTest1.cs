@@ -152,5 +152,26 @@ namespace MoodAnalyseTest
                 Assert.AreEqual(expected, Ex.Message);
             }
         }
+
+        /// <summary>
+        /// MoodAnalyserFactory to Invoke Method using Reflection
+        /// </summary>
+        [TestMethod]
+        public void Invoke_Method()
+        {
+            string expected = "HAPPY";
+            MoodAnalyserFactory factory = new MoodAnalyserFactory();
+            string act = factory.InvokeMethod("HAPPY", "AnalyseMood");
+            Assert.AreEqual(expected, act);
+        }
+        [TestMethod]
+        public void Invalid_Method()
+        {
+            string expected = "HAPPY";
+            MoodAnalyserFactory factory = new MoodAnalyserFactory();
+            string act = factory.InvokeMethod("HAPPY", "AnalyseMood");
+
+            Assert.AreEqual(expected, act);
+        }
     }
 }
