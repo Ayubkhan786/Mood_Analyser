@@ -72,8 +72,46 @@ namespace MoodAnalyseTest
             Assert.AreEqual("happy", res1);
         }
 
+        /// <summary>
+        /// Use Reflection to Create MoodAnalyser with default Constructor
+        /// </summary>
        
+        
+        [TestMethod]
+        public void No_Such_Class()
+        {
+            string exp = "Can't Found This Class ";
+            object obj = null;
+            try
+            {
+                MoodAnalyserFactory test = new MoodAnalyserFactory();
+                obj = test.Mood_Analyser("MoodAnalyser.MoodAnalyser", "MoodAnalyse");
 
+            }
+            catch (Custom_Exception actual)
+
+            {
+                Assert.AreEqual(exp, actual.Message);
+            }
+        }
       
+        [TestMethod]
+        public void No_Such_Constructor()
+        {
+            string expected = "Can't Found This Constructor ";
+            object obj = null;
+            try
+            {
+                MoodAnalyserFactory test = new MoodAnalyserFactory();
+                obj = test.Mood_Analyser("MoodAnalyser.MoodAnalyser", "MoodAnalyse");
+
+            }
+            catch (Custom_Exception actual)
+            {
+                Assert.AreEqual(expected, actual.Message);
+            }
+        }
+
+
     }
 }

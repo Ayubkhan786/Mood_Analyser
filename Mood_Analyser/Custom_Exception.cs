@@ -21,5 +21,22 @@ namespace Mood_Analyser
         {
             this.Minfo = minfo;
         }
+
+
+        /// <summary>
+        /// Used For Reflection
+        /// </summary>
+        ExceptionType type;
+        public enum ExceptionType
+        {
+            NULL, EMPTY, NO_SUCH_CLASS, NO_SUCH_CONSTRUCTOR
+        }
+        public Custom_Exception(ExceptionType type, string message) : base(message)
+        {
+            this.type = type;
+        }
     }
 }
+
+    
+
