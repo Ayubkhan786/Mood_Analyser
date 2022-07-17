@@ -10,7 +10,7 @@ namespace Mood_Analyser
 {
     public class MoodAnalyserFactory
     {
-       
+
         public object Mood_Analyser(string Class, string Constructor)
         {
             string c = @"." + Constructor + "$";
@@ -31,8 +31,36 @@ namespace Mood_Analyser
             }
            
                 throw new Custom_Exception(Custom_Exception.ExceptionType.NO_SUCH_CONSTRUCTOR, "Can't Found This Constructor ");
-           
+            
         }
+            public string MoodAnalyserParameter(string ClassN, string Constructor, string message)
+            {
+                try
+                {
+                    Type type = typeof(MoodAnalyser);
+                    if (type.Name.Equals(ClassN) || type.Name.Equals(ClassN))
+                    {
+                        if (type.Name.Equals(Constructor))
+                        {
+                            ConstructorInfo constructorInfo = type.GetConstructor(new[] { typeof(string) });
+                            var obj = constructorInfo.Invoke(new object[] { message });
+                            return Convert.ToString(obj);
+                        }
+                        else
+                        {
+                            throw new Custom_Exception(Custom_Exception.ExceptionType.NO_SUCH_CONSTRUCTOR, "Can't Found This Class " );
+
+                        }
+
+                    }
+                }
+                catch (Exception)
+                {
+                    throw new Custom_Exception(Custom_Exception.ExceptionType.NO_SUCH_CLASS, "Can't Found This Constructor ");
+
+                }
+                return default;
+            }
 
     }
 }

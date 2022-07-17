@@ -85,13 +85,13 @@ namespace MoodAnalyseTest
             try
             {
                 MoodAnalyserFactory test = new MoodAnalyserFactory();
-                obj = test.Mood_Analyser("MoodAnalyser.MoodAnalyser", "MoodAnalyse");
+                obj = test.Mood_Analyser("MoodAnalyser.MoodAnalyse", "MoodAnalyse");
 
             }
-            catch (Custom_Exception actual)
+            catch (Custom_Exception Ex)
 
             {
-                Assert.AreEqual(exp, actual.Message);
+                Assert.AreEqual(exp, Ex.Message);
             }
         }
       
@@ -106,12 +106,51 @@ namespace MoodAnalyseTest
                 obj = test.Mood_Analyser("MoodAnalyser.MoodAnalyser", "MoodAnalyse");
 
             }
-            catch (Custom_Exception actual)
+            catch (Custom_Exception Ex)
             {
-                Assert.AreEqual(expected, actual.Message);
+                Assert.AreEqual(expected,Ex.Message);
             }
         }
 
 
+        /// <summary>
+        /// Use Reflection to Create MoodAnalyser with Parameter Constructor
+        /// </summary>
+        [TestMethod]
+        public void Check_Parameterized_Constructor()
+        {
+            string message = "I am in happy mood";
+            MoodAnalyser expected = new MoodAnalyser(message);
+            object actual = null;
+            try
+            {
+                MoodAnalyserFactory factory = new MoodAnalyserFactory();
+                actual = factory.MoodAnalyserParameter("MoodAnalyser.MoodAnalyse", "Mood_Analyser", message);
+
+            }
+            catch (Custom_Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+            actual.Equals(expected);
+        }
+        //Invalid case
+        [TestMethod]
+        public void Check_Class_Error()
+        {
+            string message = "I am in happy mood";
+            MoodAnalyser expected = new MoodAnalyser(message);
+            object actual = null;
+            try
+            {
+                MoodAnalyserFactory factory = new MoodAnalyserFactory();
+                actual = factory.MoodAnalyserParameter("MoodAnalyser.MoodAnalyser", "MoodAnalyser", message);
+
+            }
+            catch (Custom_Exception Ex)
+            {
+                Assert.AreEqual(expected, Ex.Message);
+            }
+        }
     }
 }
